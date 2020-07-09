@@ -17,6 +17,8 @@
     --m: 18px;
     --l: 25px;
     --xl: 35px;
+    --xxl: 40px;
+/* Spacing */
     --head: 40px;
 /* Border radius */
     --sbord: 12.5%;
@@ -60,11 +62,14 @@ header{
     display: flex;
 }
 .logo{
-    padding: var(--xs);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: calc(var(--xl)*5.25) calc(var(--xs)*2);
+    align-self: center;
+    height: 100%;
+    padding-left: 5px;
 
+    
     color: var(--semil);
     background-color: var(--lighter);
     font-family: var(--logo);
@@ -73,25 +78,34 @@ header{
     font-size: var(--xl);
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    align-self: flex-end;
+    align-self: center;
+    justify-self: flex-end;
 }
 .logo__subtitle{
     grid-column: 1 / 2;
     grid-row:  1 / 2;
     align-self: flex-end;
+    justify-self: flex-start;
+    padding-left: var(--xs);
 }
 .logo__sidetitle{
     grid-column: 2 / 3;
     grid-row:  1 / 2;
     align-self: flex-end;
+    background-color: var(--lighter);
+    padding-right: 25vw;
+    padding-top: var(--head);
 }
 .logo__subtitle, .logo__sidetitle{
     font-size: var(--xs);
+    padding-bottom: 6px;
 }
 .logo__icon{
+    background-color: var(--lighter);
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     align-self: flex-start;
+    padding-right: 25vw;
 }
 
 
@@ -100,21 +114,32 @@ header{
     width: 100%;
 }
 .navbar__square{
-    padding: var(--xs);
+    padding: auto;
     background-color: var(--dark);
     width: 100%;
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-content: center;
 }
 .navbar__triangle{
-    display: block;
-    width: calc(var(--head) * 1.5);
-    border-top:50px solid var(--lighter);
-    border-right:50px solid var(--dark); 
+    display: inline-block;
+    border-top:calc(var(--head)*1.5) solid transparent;
+    border-right:calc(var(--head)*1.5) solid var(--dark); 
 }
+.navbar__titles{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: var(--m);
+    align-self: center;
+}
+
 .navbar__menu{
-    height: 45px;
-    width: 55px;
+    height: var(--head);
+    width: var(--head);
+    margin: 0 auto;
+    align-self: center;
 }
 
 footer{
@@ -132,13 +157,28 @@ footer{
     text-align: center;
 }
 
-@media (min-width: 600px) {
-    :root{
-    --xs: 15px;
-    --s: 25px;
-    --m: 35px;
-    --l: 40px;
-    --xl: 70px;
-    --head: 80px;
+
+@media (min-width: 768px) {
+    .navbar__square{
+        justify-self: center;
+    }
+ .navbar__menu {
+     display: none;
  }
+ .navbar__titles{
+    display: flex;
+}
+}
+
+@media (min-width: 1024px) {
+    :root{
+        --xs: 12.5px;
+        --s: 20px;
+        --m: 25px;
+        --l: 32px;
+        --xl: 50px;
+        --xxl: 60px;
+    
+        --head: 60px;
+    }
 }
