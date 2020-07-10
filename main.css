@@ -61,9 +61,11 @@ body{
 /* HEADER */
 
 header{
+    position: fixed;
     height: calc(var(--head) * 1.5);
     width: 100%;
     display: flex;
+    z-index: 1;
 }
 /* ecogreen logo */
 .logo{
@@ -74,7 +76,6 @@ header{
     height: 100%;
     padding-left: 5px;
 
-    
     color: var(--semil);
     background-color: var(--lighter);
     font-family: var(--logo);
@@ -141,10 +142,22 @@ header{
     align-self: center;
 }
 
+
+/* MAIN CONTENT */
+main{
+    margin-top: calc(var(--head) * 1.5);
+}
+
 /* LANDING/HOME PAGE */
 .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
     background: var(--cover);
-    overflow: hidden;
     height: 100vh;
     position: relative;
 }
@@ -156,10 +169,12 @@ header{
     height: 100%;
     z-index: -1;
 }
+
 .home__title{
     font-size: var(--xxl);
     font-family: var(--acc);
     font-weight: var(--bold);
+    padding-bottom: var(--xl);
 }
 .home__btn{
     background-color: var(--light);
@@ -207,15 +222,14 @@ footer{
  .navbar__menu {
      display: none;
     }
-    .home{
-        background: var(--cover);
-        overflow: unset;
+     .home{
+        display: inline-block;
+        background: linear-gradient(270deg,rgba(255, 255, 255, 0), rgba(175, 175, 175, 0.64), rgba(184, 184, 184, 1)) 0% 0% no-repeat ;
+        overflow: visible;
         height: 100vh;
         position: relative;
     }
-    .home{
-        background: transparent linear-gradient(270deg, #FFFFFF38 0%, #AFAFAF91 50%, #B8B8B8 100%) 0% 0% no-repeat 
-    }
+
     .home:before{
         background: url(images/Crane1.png) no-repeat center right;
     }
