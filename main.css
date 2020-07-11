@@ -20,14 +20,14 @@
     --xl: 35px;
     --xxl: 40px;
 /* Spacing */
-    --head: 40px;
+    --head: 55px;
 /* Border radius */
-    --sbord: 12.5%;
+    --sbord: 12.5px;
     --mbord: calc(var(--sbord)*2);
     --lbord: calc(var(--mbord)*2);
 /* Colors */
     --back: #B8B8B8;
-    --cover: rgba(184, 184, 184, 0.75);
+    --cover: rgba(184, 184, 184, 0.70);
     --darkest: #023000;
     --darker: #034600;
     --dark: #034000;
@@ -37,7 +37,7 @@
     --lighter: #C2DBC2;
     --lighest: #DAF9DA;
     /* Shadows */
-    --shlight: 0px 10px 0px var(--semil);
+    --shlight: 0px var(--xs) 0px var(--semil);
     --shwhite: 0px 5px 0px #D5D5D5;
 }
 
@@ -52,7 +52,6 @@ html{
 }
 
 body{
-    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -62,7 +61,7 @@ body{
 
 header{
     position: fixed;
-    height: calc(var(--head) * 1.5);
+    height: var(--head);
     width: 100%;
     display: flex;
     z-index: 1;
@@ -100,11 +99,10 @@ header{
     align-self: flex-end;
     background-color: var(--lighter);
     padding-right: 25vw;
-    padding-top: var(--head);
+    padding-top: calc(var(--head) * 0.75);
 }
 .logo__subtitle, .logo__sidetitle{
     font-size: var(--xs);
-    padding-bottom: 6px;
 }
 .logo__icon{
     background-color: var(--lighter);
@@ -127,11 +125,11 @@ header{
 }
 .navbar__triangle{
     display: inline-block;
-    border-top:calc(var(--head)*1.5) solid transparent;
-    border-right:calc(var(--head)*1.5) solid var(--dark); 
+    border-top: var(--head) solid transparent;
+    border-right: var(--head) solid var(--dark); 
 }
 
-.navbar__square > h3{
+.navbar__square > h5{
     display: none;
 }
 
@@ -140,33 +138,34 @@ header{
     width: var(--head);
     margin: 0 auto;
     align-self: center;
+    padding: var(--xs) 0;
 }
 
 
 /* MAIN CONTENT */
 main{
-    margin-top: calc(var(--head) * 1.5);
+    margin-top: var(--head);
 }
 
-/* LANDING/HOME PAGE */
+/* home page */
 .home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
-
-    background: var(--cover);
+    background: var(--cover); 
     height: 100vh;
     position: relative;
 }
 .home:before{
     content: '';
-    background: url(images/Crane1.png) center center/cover;
+    background: url(images/Crane1.png) no-repeat center center/cover;
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -174,17 +173,41 @@ main{
     font-size: var(--xxl);
     font-family: var(--acc);
     font-weight: var(--bold);
-    padding-bottom: var(--xl);
+    padding-bottom: var(--xxl);
 }
 .home__btn{
-    background-color: var(--light);
+    background: linear-gradient(360deg, var(--light), var(--semil), var(--semid));
     color: white;
-    padding: var(--s);
+    padding: var(--s) var(--l);
     font-family: var(--main);
     font-size: var(--s);
     font-weight: var(--med);
-    box-shadow: var(--shlight)
+    box-shadow: var(--shlight);
+    border-radius: var(--sbord);
+    border: 0;
 }
+
+.home__btn:hover{
+    background: linear-gradient(360deg, var(--lighter), var(--light), var(--semil));
+}
+
+/* services page */
+.services{
+    background-color: white;
+}
+.services--inner{
+    margin-left: 40vw;
+    display: inline-block;
+}
+.services__title{
+    font-size: var(--xl);
+    font-family: var(--acc);
+    font-weight: var(--bold);
+}
+.services__underline{
+    border: var(--s) solid var(--light);
+}
+
 
 /* FOOTER */
 
@@ -215,23 +238,15 @@ footer{
     font-size: var(--s);
     padding: 0 var(--xs);
     }
-    .navbar__square > h3{
+    .navbar__square > h5{
         display: block;
         align-self: center;
     }
  .navbar__menu {
      display: none;
     }
-     .home{
-        display: inline-block;
-        background: linear-gradient(270deg,rgba(255, 255, 255, 0), rgba(175, 175, 175, 0.64), rgba(184, 184, 184, 1)) 0% 0% no-repeat ;
-        overflow: visible;
-        height: 100vh;
-        position: relative;
-    }
-
-    .home:before{
-        background: url(images/Crane1.png) no-repeat center right;
+    .home__title{
+        font-size: var(--head);
     }
 }
 
@@ -244,6 +259,19 @@ footer{
         --xl: 50px;
         --xxl: 60px;
     
-        --head: 60px;
+        --head: 70px;
+    }
+    .home__title{
+        font-size: var(--xxl);
+        padding-left: var(--s)
+    }
+    .home{
+        background: linear-gradient(270deg,rgba(255, 255, 255, 0.25), rgba(175, 175, 175, 0.75), rgba(184, 184, 184, 1)), url(images/Crane1.png) no-repeat right ;
+    }
+    .home:before{
+        display: none;
+    }
+    .home__title, .home__btn {
+        margin-right: 50vw;
     }
 }
