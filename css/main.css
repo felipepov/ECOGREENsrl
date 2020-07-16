@@ -1,1 +1,283 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@900&family=Roboto+Slab:wght@400;700&Work+Sans:wght@800&family=Roboto:wght@100;400;500&display=swap");*{box-sizing:border-box;margin:0;padding:0}html{height:100%}body{min-height:100vh;display:flex;flex-direction:column}header{position:fixed;height:calc(55px * 1.25);width:100%;display:flex;z-index:1;background-color:#C2DBC2}.logo{display:grid;grid-template-rows:1fr;grid-template-columns:calc(35px* 5.25) calc(10px* 2);align-self:center;height:100%;padding-left:5px;padding-right:10px;color:green;background-color:#C2DBC2;font-family:"Alegreya SC",serif}.logo__title{font-size:35px;grid-column:1 / 2;grid-row:1 / 2;align-self:center;justify-self:flex-end}.logo__subtitle{grid-column:1 / 2;grid-row:1 / 2;align-self:flex-end;align-self:center;padding-top:40px;padding-left:10px}.logo__sidetitle{grid-column:2 / 3;grid-row:1 / 2;align-self:center;padding-top:18px;background-color:#C2DBC2;padding-right:25vw;padding-left:3px}.logo__subtitle,.logo__sidetitle{font-size:10px}.logo__icon{background-color:#C2DBC2;grid-column:2 / 3;grid-row:1 / 2;align-self:flex-start;padding-right:25vw}.navbar{display:flex;width:100%}.navbar__square{background-color:#034000;width:100%;display:flex;align-content:center}.navbar__triangle{display:inline-block;border-top:calc(55px * 1.25) solid transparent;border-right:calc(55px * 1.25) solid #034000}.navbar__square>h5{display:none}.navbar__menu{height:55px;width:55px;margin:0 auto;align-self:center;padding:10px 0}main{margin-top:55px}.home{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(184,184,184,0.7);height:100vh;position:relative}.home:before{content:"";background:url(images/Crane1.png) no-repeat center center/cover;position:absolute;width:100%;height:100%;top:0;left:0;z-index:-1}.home__title{font-size:40px;font-family:"Roboto Slab",serif;font-weight:700;padding-bottom:40px;letter-spacing:1px}.home__btn{background:linear-gradient(360deg, green, #045D00, #034000);color:white;padding:18px 35px;font-family:"Roboto",sans-serif;font-size:14px;font-weight:500;box-shadow:0px var(10px) 0px var(green);border-radius:12.5px;border:0}.home__btn:hover{background:linear-gradient(360deg, #00B700, green, #045D00)}.home a{text-decoration:none}.services{background-color:white}.services--inner{display:flex;flex-direction:column}.services__title{font-size:35px;font-family:"Roboto Slab",serif;font-weight:700;margin-top:18px;align-self:center;letter-spacing:calc(10px * 0.3)}.services__underline{align-self:center;width:10em;border:7px solid #00B700;margin:14px 0}.services__cards{display:flex;flex-direction:column;margin-top:14px}.card{background:rgba(184,184,184,0.7);width:100%;text-align:center;height:400px;margin:14px 0;color:white}.card__title{font-size:25px;font-family:"Roboto Slab",serif;font-weight:700}.card__text{font-size:18px;font-family:"Roboto",sans-serif;font-weight:400}footer{height:35px;margin-top:auto;background-color:#034000;padding:10px}.footer__info{font-family:"Roboto",sans-serif;font-weight:100;color:#B8B8B8;font-size:10px;text-align:center}@media (min-width: 768px){.navbar__square{flex-direction:row;justify-content:space-around;color:white;font-family:"Roboto",sans-serif;font-size:18px;font-weight:700;padding:0 10px}.navbar__square>h5{display:block;align-self:center}.navbar__menu{display:none}.home__title{font-size:55px}.services__cards{display:flex;flex-direction:row}.card{width:30vw;border-radius:calc(calc(12.5px*2)*2);margin:0 14px}}@media (min-width: 1100px){.home{background:linear-gradient(270deg, rgba(255,255,255,0.25), rgba(175,175,175,0.75), #b8b8b8),url(images/Crane1.png) no-repeat right}.home:before{display:none}.home__title{font-size:40px;padding-left:14px}.home__title,.home__btn{margin-right:50vw}}
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@900&family=Roboto+Slab:wght@400;700&Work+Sans:wght@800&family=Roboto:wght@100;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  height: calc(55px * 1.25);
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  background-color: #C2DBC2;
+}
+
+/* ecogreen logo */
+.logo {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: calc(35px* 5.25) calc(10px* 2);
+  align-self: center;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: #008000;
+  background-color: #C2DBC2;
+  font-family: "Alegreya SC", serif;
+}
+
+.logo__title {
+  font-size: 35px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.logo__subtitle {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: flex-end;
+  align-self: center;
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+.logo__sidetitle {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: center;
+  padding-top: 18px;
+  background-color: #C2DBC2;
+  padding-right: 25vw;
+  padding-left: 3px;
+}
+
+.logo__subtitle, .logo__sidetitle {
+  font-size: 10px;
+}
+
+.logo__icon {
+  background-color: #C2DBC2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: flex-start;
+  padding-right: 25vw;
+}
+
+/* navigation */
+.navbar {
+  display: flex;
+  width: 100%;
+}
+
+.navbar__square {
+  background-color: #034000;
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+
+.navbar__triangle {
+  display: inline-block;
+  border-top: calc(55px * 1.25) solid transparent;
+  border-right: calc(55px * 1.25) solid #034000;
+}
+
+.navbar__square > h5 {
+  display: none;
+}
+
+.navbar__menu {
+  height: 55px;
+  width: 55px;
+  margin: 0 auto;
+  align-self: center;
+  padding: 10px 0;
+}
+
+/* MAIN CONTENT */
+main {
+  margin-top: 55px;
+}
+
+/* home page */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(184, 184, 184, 0.7);
+  height: 100vh;
+  position: relative;
+}
+
+.home:before {
+  background: url(images/Crane1.png) no-repeat center center/cover;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home__title {
+  font-size: 40px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  padding-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.home__btn {
+  background: linear-gradient(360deg, #008000, #045D00, #034000);
+  color: white;
+  padding: 18px 35px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px var(10px) 0px var(#008000);
+  border-radius: 12.5px;
+  border: 0;
+}
+
+.home__btn:hover {
+  background: linear-gradient(360deg, #00B700, #008000, #045D00);
+}
+
+.home a {
+  text-decoration: none;
+}
+
+/* services page */
+.services {
+  background-color: white;
+}
+
+.services--inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__title {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin-top: 18px;
+  align-self: center;
+  letter-spacing: calc(10px * 0.3);
+}
+
+.services__underline {
+  align-self: center;
+  width: 10em;
+  border: 7px solid #00B700;
+  margin: 14px 0;
+}
+
+.services__cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.card {
+  background: rgba(184, 184, 184, 0.7);
+  width: 100%;
+  text-align: center;
+  height: 400px;
+  margin: 14px 0;
+  color: white;
+}
+
+.card__title {
+  font-size: 25px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.card__text {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* FOOTER */
+footer {
+  height: 35px;
+  margin-top: auto;
+  background-color: #034000;
+  padding: 10px;
+}
+
+.footer__info {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #B8B8B8;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* RESPONSIVENESS */
+@media (min-width: 768px) {
+  .navbar__square {
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 10px;
+  }
+  .navbar__square > h5 {
+    display: block;
+    align-self: center;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .home__title {
+    font-size: 55px;
+  }
+  .services__cards {
+    display: flex;
+    flex-direction: row;
+  }
+  .card {
+    width: 30vw;
+    border-radius: calc(calc(12.5px*2)*2);
+    margin: 0 14px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .home {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.25), rgba(175, 175, 175, 0.75), #b8b8b8), url(images/Crane1.png) no-repeat right;
+  }
+  .home:before {
+    display: none;
+  }
+  .home__title {
+    font-size: 40px;
+    padding-left: 14px;
+  }
+  .home__title, .home__btn {
+    margin-right: 50vw;
+  }
+}
