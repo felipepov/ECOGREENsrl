@@ -17,20 +17,41 @@
       <nav class="navbar">
         <div class="navbar__triangle"></div>
         <div class="navbar__square">
-          <h5>Home</h5>
-          <h5>Servicios</h5>
-          <h5>Quienes Somos</h5>
-          <h5>Proyectos</h5>
-          <h5>Contactanos</h5>
-          <img src="images/Menu.svg" alt="hamburger" class="navbar__menu" />
+          <h5 class="navbar__square__titles">Home</h5>
+          <h5 class="navbar__square__titles">Servicios</h5>
+          <h5 class="navbar__square__titles">Quienes Somos</h5>
+          <h5 class="navbar__square__titles">Proyectos</h5>
+          <h5 class="navbar__square__titles">Contactanos</h5>
+          
+          <div class="navbar__menu">
+            <input type="checkbox" class="toggler" />
+            <div class="hamburger">
+              <!-- <img src="images/Menu.svg" alt="hamburger" /> -->
+              <div></div>
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </nav>
     </header>
     <main>
-      <div class="home">
+      <figure class="home">
+        <img src="images/Crane1.png" alt="Crane" class="home__img" />
         <h1 class="home__title">Trabajo y Construccion de Calidad</h1>
         <a href="#" class="home__btn">TRABAJA CON NOSOTROS</a>
-      </div>
+      </figure>
       <div class="services">
         <div class="services--inner">
           <h2 class="services__title">SERVICIOS</h2>
@@ -39,15 +60,24 @@
         <div class="services__cards">
           <div class="card card--storage">
             <h4 class="card__title">ALMACENIMIENTO</h4>
-            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
           </div>
           <div class="card card--bridge">
             <h4 class="card__title">PUENTES</h4>
-            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
           </div>
           <div class="card card--stations">
             <h4 class="card__title">ESTACIONES DE SERVICIO</h4>
-            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
           </div>
         </div>
       </div>
