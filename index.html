@@ -17,11 +17,11 @@
       <nav class="navbar">
         <div class="navbar__triangle"></div>
         <div class="navbar__square">
-          <h5 class="navbar__square__titles">Home</h5>
-          <h5 class="navbar__square__titles">Servicios</h5>
-          <h5 class="navbar__square__titles">Quienes Somos</h5>
-          <h5 class="navbar__square__titles">Proyectos</h5>
-          <h5 class="navbar__square__titles">Contactanos</h5>
+          <h5 class="navbar__square__titles"><a href="#home">Home</a></h5>
+          <h5 class="navbar__square__titles"><a href="#services">Servicios</a></h5>
+          <h5 class="navbar__square__titles"><a href="#about">Quienes Somos</a></h5>
+          <h5 class="navbar__square__titles"><a href="#proyects">Proyectos</a></h5>
+          <h5 class="navbar__square__titles"><a href="#contact">Contactanos</a></h5>
           
           <div class="navbar__menu">
             <input type="checkbox" class="toggler" />
@@ -33,10 +33,11 @@
               <div>
                 <div>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#about">Quienes Somos</a></li>
+                    <li><a href="#proyects">Proyectos</a></li>
+                    <li><a href="#contact">Contactanos</a></li>
                   </ul>
                 </div>
               </div>
@@ -47,15 +48,15 @@
       </nav>
     </header>
     <main>
-      <figure class="home">
+      <figure class="home" id="home">
         <img src="images/Crane1.png" alt="Crane" class="home__img" />
         <h1 class="home__title">Trabajo y Construccion de Calidad</h1>
         <a href="#" class="home__btn">TRABAJA CON NOSOTROS</a>
       </figure>
-      <div class="services">
-        <div class="services--inner">
-          <h2 class="services__title">SERVICIOS</h2>
-          <hr class="services__underline" />
+      <div class="services" id="services">
+        <div class="intro">
+          <h2 class="intro__title">SERVICIOS</h2>
+          <hr class="intro__underline" />
         </div>
         <div class="services__cards">
           <div class="card card--storage">
@@ -81,6 +82,18 @@
           </div>
         </div>
       </div>
+      <div class="about" id="about">
+        <div class="intro">
+          <h2 class="intro__title">¿Quienes somos?</h2>
+          <hr class="intro__underline">
+        </div>
+        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id nibh tortor. Faucibus purus in massa tempor nec feugiat nisl pretium. Venenatis urna cursus eget nunc scelerisque viverra mauris. </p>
+        <p class="about__text">Id semper risus in hendrerit gravida. Commodo elit at imperdiet dui accumsan. Netus et malesuada fames ac turpis egestas sed tempus. Eget aliquet nibh praesent tristique. Erat pellentesque adipiscing commodo elit at imperdiet dui. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. </p>
+        <p class="about__text">Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Ullamcorper malesuada proin libero nunc consequa. Venenatis urna cursus eget nunc scelerisque viverra mauris.</p>
+        <img src="images/engineers.jpg" alt="ingenieros" class="about__img">
+      </div>
+
+      
     </main>
     <footer>
       <h5 class="footer__info">
