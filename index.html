@@ -18,15 +18,22 @@
         <div class="navbar__triangle"></div>
         <div class="navbar__square">
           <h5 class="navbar__square__titles"><a href="#home">Home</a></h5>
-          <h5 class="navbar__square__titles"><a href="#services">Servicios</a></h5>
-          <h5 class="navbar__square__titles"><a href="#about">Quienes Somos</a></h5>
-          <h5 class="navbar__square__titles"><a href="#proyects">Proyectos</a></h5>
-          <h5 class="navbar__square__titles"><a href="#contact">Contactanos</a></h5>
-          
+          <h5 class="navbar__square__titles">
+            <a href="#services">Servicios</a>
+          </h5>
+          <h5 class="navbar__square__titles">
+            <a href="#about">Quienes Somos</a>
+          </h5>
+          <h5 class="navbar__square__titles">
+            <a href="#proyects">Proyectos</a>
+          </h5>
+          <h5 class="navbar__square__titles">
+            <a href="#contact">Contactanos</a>
+          </h5>
+
           <div class="navbar__menu">
             <input type="checkbox" class="toggler" />
             <div class="hamburger">
-              <!-- <img src="images/Menu.svg" alt="hamburger" /> -->
               <div></div>
             </div>
             <div class="menu">
@@ -43,7 +50,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </nav>
     </header>
@@ -53,7 +59,7 @@
         <h1 class="home__title">Trabajo y Construccion de Calidad</h1>
         <a href="#" class="home__btn">TRABAJA CON NOSOTROS</a>
       </figure>
-      <div class="services" id="services">
+      <div class="page services" id="services">
         <div class="intro">
           <h2 class="intro__title">SERVICIOS</h2>
           <hr class="intro__underline" />
@@ -82,18 +88,74 @@
           </div>
         </div>
       </div>
-      <div class="about" id="about">
-        <div class="intro">
-          <h2 class="intro__title">¿Quienes somos?</h2>
-          <hr class="intro__underline">
+      <div class="page about" id="about">
+        <div class="about__container">
+          <div class="about__container--p">
+            <div class="intro">
+              <h2 class="intro__title">¿Quienes somos?</h2>
+              <hr class="intro__underline" />
+            </div>
+            <p class="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. At
+              tellus at urna condimentum mattis pellentesque id nibh tortor.
+              Faucibus purus in massa tempor nec feugiat nisl pretium. Venenatis
+              urna cursus eget nunc scelerisque viverra mauris.
+            </p>
+            <p class="about__text">
+              Id semper risus in hendrerit gravida. Commodo elit at imperdiet
+              dui accumsan. Netus et malesuada fames ac turpis egestas sed
+              tempus. Eget aliquet nibh praesent tristique. Erat pellentesque
+              adipiscing commodo elit at imperdiet dui. Vulputate enim nulla
+              aliquet porttitor lacus luctus accumsan tortor.
+            </p>
+            <p class="about__text">
+              Cursus risus at ultrices mi tempus imperdiet nulla malesuada.
+              Ullamcorper malesuada proin libero nunc consequa. Venenatis urna
+              cursus eget nunc scelerisque viverra mauris.
+            </p>
+          </div>
+          <img src="images/engineers.jpg" alt="ingenieros" class="about__img" />
         </div>
-        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id nibh tortor. Faucibus purus in massa tempor nec feugiat nisl pretium. Venenatis urna cursus eget nunc scelerisque viverra mauris. </p>
-        <p class="about__text">Id semper risus in hendrerit gravida. Commodo elit at imperdiet dui accumsan. Netus et malesuada fames ac turpis egestas sed tempus. Eget aliquet nibh praesent tristique. Erat pellentesque adipiscing commodo elit at imperdiet dui. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. </p>
-        <p class="about__text">Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Ullamcorper malesuada proin libero nunc consequa. Venenatis urna cursus eget nunc scelerisque viverra mauris.</p>
-        <img src="images/engineers.jpg" alt="ingenieros" class="about__img">
       </div>
-
-      
+      <div class="page proyects" id="proyects">
+        <div class="intro">
+          <h2 class="intro__title">Proyectos</h2>
+          <hr class="intro__underline" />
+        </div>
+      </div>
+      <div class="page contact" id="contact">
+        <div class="intro">
+          <h2 class="intro__title">Contactanos</h2>
+          <hr class="intro__underline" />
+        </div>
+        <div class="contact__container">
+          <div class="contact__location"></div>
+          <div class="contact__reach">
+            <div class="contact__info">
+              <div class="info info--phone">
+                <img src="images/phone-2.svg" alt="" class="info__icon">
+                <p>+54 9 381 123-4567</p>
+              </div>
+              <div class="info info--mail">
+                <img src="images/email-84.svg" alt="" class="info__icon">
+                <p>ecogreen@outlook.com</p>
+              </div>
+            </div>
+            <div class="contact__forum">
+              <h3>Ponete en contacto AHORA, rellenando este formulario:</h3>
+              <input type="text" placeholder="Nombre" />
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Asunto" />
+              <textarea name="message" rows="4" cols="50">Escribe tu mensaje aqui...
+                </textarea>
+            <button>
+              <span>Enviar</span>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <h5 class="footer__info">
