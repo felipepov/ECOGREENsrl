@@ -10,3 +10,29 @@ links.forEach(cur =>
         }
     })
 )
+
+
+const emailSent = () => {
+    // window.location.href = '';
+    const head = document.getElementById('header');
+    const html = `<div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> <strong>Felicitaciones: </strong> Gracias por haberte contactado con nosotros. Te responderemos pronto!.</div>`;
+    head.insertAdjacentHTML('afterbegin', html);
+    localStorage.removeItem('email');
+}
+
+window.onload = function emailCheck() {
+    if (localStorage.getItem('email') == 'true') {
+        emailSent()
+    }
+}
+
+const sendEmail = () => {
+    const link = "mailto:ecogreensrl14@gmail.com"
+             + "?cc=" + encodeURIComponent(document.getElementById('email').value)
+             + "&subject=" + encodeURIComponent(document.getElementById('subject').value)
+             + "&body=" + encodeURIComponent(document.getElementById('body').value)
+    ;
+    
+    window.location.href = link;
+    localStorage.setItem('email', 'true');
+}

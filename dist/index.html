@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.min.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16//favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package_v0.16//site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package_v0.16//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Ecogreen Construccion SRL</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="logo">
         <h2 class="logo__title">ECOGREEN</h2>
         <h6 class="logo__subtitle">CONSTRUCTORA</h6>
         <h6 class="logo__sidetitle">SRL</h6>
-        <img src="images/Leaf.png" alt="green_leaf" class="logo__icon" />
+        <img src="images/icono.png" alt="green_leaf" class="logo__icon" />
       </div>
-      <nav class="navbar">
+      <nav class="navbar" >
         <div class="navbar__triangle"></div>
         <div class="navbar__square">
           <h5 class="navbar__square__titles"><a href="#home">Home</a></h5>
@@ -53,7 +62,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main >
       <figure class="home" id="home">
         <img src="images/Crane1.png" alt="Crane" class="home__img" />
         <div class="home__main">        
@@ -98,17 +107,16 @@
               <hr class="intro__underline" />
             </div>
             <p class="about__text">
-              ECOGREEN es una empresa familiar dedicada a la ingeniería y construcción de obras civiles y viales.
+              <b>ECOGREEN</b> es una empresa familiar dedicada a la ingeniería y construcción de obras civiles y viales.
               La empresa fue creada en 2014 por Ing. Horacio Poviña e Ing. Ignacio Poviña, quienes tienen una larga trayectoria en la construcción de diferentes obras civiles.
-              La asociación entre los hermanos se ha dado naturalmente. Horacio quien tiene una amplia experiencia con mas de 30 años trabajando en el Noroeste Argentino, se asocio Ignacio, quien estuvo 25 años participando de diversos e importantes proyectos internacionales ejecutados en España, Hong Kong, Portugal, Chile y Canadá.
               La asociación ha redundado en la formación de una empresa con un fuerte experiencia en diversas soluciones constructivas, destancandose la profesionalidad, el compromiso con la calidad y la responsabilidad para el cumplimiento de los plazos y condiciones de cada Proyecto encomendado.
             </p>
             <p class="about__text">
               Contamos con equipos propios para ejecución de nuestras obras así como también para alquiler de los mismos, tratando siempre de ser sumamente responsables en el cumplimiento de plazos y condiciones en cada proyecto encomendado
             </p>
             <p class="about__text">
-              Nuestra VISIÓN es ser reconocidos por nuestros clientes como socios naturales para sus proyectos, ofreciendo compromiso y calidad en los servicios solicitados.
-              Nuestra MISIÓN es facilitar el crecimiento integral y sustentable de nuestra empresa, en un marco de responsabilidad social y de rentabilidad como condición necesaria.
+              Nuestra <b>VISIÓN</b> es ser reconocidos por nuestros clientes como socios naturales para sus proyectos, ofreciendo compromiso y calidad en los servicios solicitados.
+              Nuestra <b>MISIÓN</b> es facilitar el crecimiento integral y sustentable de nuestra empresa, en un marco de responsabilidad social y de rentabilidad como condición necesaria.
             </p>
           </div>
           <img src="images/engineers.jpg" alt="ingenieros" class="about__img" />
@@ -140,12 +148,12 @@
                 <p>ecogreen@outlook.com</p>
               </div>
             </div>
-            <form class="contact__form">
-              <h3>Ponete en contacto AHORA, rellenando este formulario:</h3>
+            <form class="contact__form" onsubmit="sendEmail()">
+              <h3>Ponete en contacto <b>AHORA</b>, rellenando este formulario:</h3>
               <input type="name" placeholder="Nombre" />
-              <input type="email" placeholder="Email" />
-              <input type="title" placeholder="Asunto" />
-              <textarea name="message" rows="4" cols="50"placeholder="Escribe tu mensaje aqui..." minlength="10" maxlength="250"></textarea>
+              <input id="email" type="email" placeholder="Email" />
+              <input id="subject" type="subject" placeholder="Asunto" />
+              <textarea id="body" name="message" rows="4" cols="50"placeholder="Escribe tu mensaje aqui..." minlength="10" maxlength="2000"></textarea>
               <input type="submit" class="submit" value="Enviar"></input>
             </form>
           </div>
@@ -154,7 +162,7 @@
     </main>
     <footer>
       <h5 class="footer__info">
-        © Ecogreen SRL Construccion 2014 | Diseñado por Felipe Poviña
+        <b> © </b> Ecogreen SRL Construccion 2014: Ingeniería y Construcción de obras civiles y viales <b> - </b> Sitio diseñado por Felipe Poviña
       </h5>
     </footer>
     <script src="js/index.js" ></script>
