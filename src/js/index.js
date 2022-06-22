@@ -57,6 +57,16 @@ let setValues2 = (name, images) => {
     header2.style.backgroundImage = backgrounds2[0];    
 }
 
+let header;
+let current;
+let backgrounds = [];
+let setValues = (name, images) => {
+    header = document.getElementsByClassName(name)[0];
+    current = 0;
+    backgrounds = images;
+    header.style.backgroundImage = backgrounds[0];    
+}
+
 
 let nextBackground1 = () => {
     current1++;
@@ -69,6 +79,18 @@ let nextBackground2 = () => {
     current2 = current2 % backgrounds2.length;
     header2.style.backgroundImage = backgrounds2[current2];
 }
+
+let nextBackground = () => {
+    current++;
+    current = current % backgrounds.length;
+    header.style.backgroundImage = backgrounds[current1];
+}
+
+
+setValues('card--bridges', [`url('../../images/proyects/canal1.jpg')`
+, `url('../../images/proyects/canal2.webp')`
+, `url('../../images/proyects/canal3.jpg')`])
+setInterval(nextBackground, 2000)
 
 setValues1('card--roads', [`url('../../images/proyects/boulevard2.png')`
 , `url('../../images/proyects/boulevard1.png')`
