@@ -1,0 +1,46 @@
+@use '../abstracts/' as *;
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+  }
+
+  header {
+    position: fixed;
+    height: calc(#{$head} * 1.25);
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    background-color: $lighter;
+  }
+
+
+  main {
+    margin-top: $head;
+    margin-bottom: $xl;
+
+    .page:nth-child(odd){
+      background: $back;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    main {
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    min-height: $xl;
+    height: 100%;
+    background-color: $dark;
+    padding: $s;
+    margin-bottom: 0;
+  }
+
+  .footer__info {
+    font-family: $main;
+    font-weight: $thin;
+    color: $back;
+    font-size: $xs;
+    text-align: center;
+  }

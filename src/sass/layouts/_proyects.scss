@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.services {
+	background-color: white;
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		margin-top: $s;
+	}
+}
+
+@media (min-width: 768px) {
+	.services {
+		&__cards {
+			display: flex;
+			flex-direction: row;
+			margin: 0;
+		}
+	}
+}

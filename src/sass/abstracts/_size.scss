@@ -1,0 +1,17 @@
+$xs: 10px;
+$s: 14px;
+$m: 18px;
+$l: 25px;
+$xl: 35px;
+$xxl: 40px;
+$head: 55px;
+
+@media (min-width: 1100px) {
+	$xs: 12.5px;
+	$s: 20px;
+	$m: 25px;
+	$l: 32px;
+	$xl: 50px;
+	$xxl: 60px;
+	$head: 70px;
+}

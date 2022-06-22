@@ -1,0 +1,56 @@
+@use '../abstracts/' as *;
+
+.card {
+    background: $back;
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    margin: $s 0;
+    color: white;
+    padding: $xs;
+    position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .6; 
+      }
+    
+
+    &__img {
+      width: 100%;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__title{
+      position: absolute;
+        font-size: $l;
+        font-family: $acc;
+        font-weight: $bold;
+        text-transform: uppercase;
+    }
+    &__text{
+      position: absolute;
+        font-size: $m;
+        font-family: $main;
+        font-weight: $reg;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+
+    .card{
+      width: 30%;
+      border-radius: $lbord;
+      margin: $s;
+    }
+}

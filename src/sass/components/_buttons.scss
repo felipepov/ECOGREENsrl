@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+
+.alert {
+    position: absolute;
+    top: calc(#{$head} * 1.25);
+    width: 100%;
+    font-size: $s;
+    padding: $s;
+    background-color: $light;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: $s;
+    color: white;
+    font-weight: $bold;
+    float: right;
+    font-size: $s;
+    line-height: $s;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

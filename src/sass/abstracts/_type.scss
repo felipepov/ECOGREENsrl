@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@900&family=Roboto+Slab:wght@400;700&Work+Sans:wght@800&family=Roboto:wght@100;400;500&display=swap");
+
+$thin: 100;
+$reg: 400;
+$med: 500;
+$bold: 700;
+$heavy: 900;
+
+//Borders
+$sbord: 12.5px;
+$mbord: calc(#{$sbord}*2);
+$lbord: calc(#{$mbord}*2);
+
+// Fonts
+$logo: 'Alegreya SC', serif;
+$main: 'Roboto', sans-serif;
+$acc: 'Roboto Slab', serif;

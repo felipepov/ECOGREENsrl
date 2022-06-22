@@ -1,0 +1,93 @@
+@use '../abstracts/' as *;
+
+.contact {
+	padding: 0 $m $l $m;
+  min-height: 100vh;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	&__location {
+		* {
+      border-radius: $sbord;
+			padding-right: $xs;
+			height: 100%;
+			min-width: 100%;
+			max-width: 50%;
+		}
+	}
+}
+
+.contact__info {
+	padding: $s 0;
+
+	.info {
+		display: flex;
+		justify-content: center;
+
+		&__icon {
+			width: $l;
+			height: $l;
+			margin-right: $s;
+		}
+		p {
+			font-family: $acc;
+			font-size: $m;
+			font-weight: $bold;
+		}
+	}
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+
+	h3 {
+		font-family: $acc;
+		font-size: $m;
+		font-weight: $reg;
+	}
+	input {
+		padding: $xs;
+		font-size: $s;
+		font-family: $main;
+		font-weight: $thin;
+		margin: 5px 0;
+	}
+	textarea {
+		padding: $xs;
+		resize: none;
+		font-size: $s;
+		font-family: $main;
+		font-weight: $thin;
+	}
+
+	textarea,
+	input {
+		outline: none;
+		border-radius: calc(#{$sbord} * 0.5);
+		border-width: 0px;
+	}
+
+	.submit {
+		color: white;
+		padding: $xs;
+		background: $light;
+		font-size: $s;
+		font-family: $main;
+		font-weight: $reg;
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		&__container {
+			flex-direction: row;
+		}
+		&__location {
+			align-self: stretch;
+		}
+	}
+}

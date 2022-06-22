@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+
+.logo {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: calc(#{$xl}* 5.25) calc(#{$xs}* 2);
+	align-self: center;
+	height: 100%;
+	padding-left: 5px;
+	padding-right: $xs;
+	text-transform: uppercase;
+
+	color: $semil;
+	background-color: $lighter;
+	font-family: $logo;
+
+	&__title {
+		font-size: $xl;
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		align-self: center;
+		justify-self: flex-end;
+	}
+	&__subtitle {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		align-self: flex-end;
+		align-self: center;
+		padding-top: $xxl;
+		padding-left: 6px;
+	}
+	&__sidetitle {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		align-self: center;
+		padding-top: $m;
+		background-color: $lighter;
+		padding-right: 25%;
+		padding-left: 3px;
+	}
+	&__subtitle,
+	&__sidetitle {
+		font-size: $xs;
+	}
+	&__icon {
+		background-color: $lighter;
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		align-self: flex-start;
+		padding-right: 25%;
+	}
+}

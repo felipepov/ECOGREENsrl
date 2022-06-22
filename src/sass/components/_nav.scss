@@ -1,0 +1,180 @@
+@use '../abstracts/' as *;
+
+.navbar {
+	display: flex;
+	width: 100%;
+	&__square {
+		background-color: $dark;
+		width: 100%;
+		display: flex;
+		align-content: center;
+
+		&__titles {
+			display: none;
+		}
+	}
+	&__triangle {
+		display: inline-block;
+		padding-left: $xs;
+		// border-top: calc(#{$head} * 1.25) solid transparent;
+		// border-right: calc(#{$head} * 1.25) solid $dark;
+	}
+}
+
+.navbar__menu {
+	margin: 0 auto;
+	align-self: center;
+
+	.toggler {
+		position: absolute;
+		z-index: 2;
+		cursor: pointer;
+		width: 50px;
+		height: 50px;
+		opacity: 0;
+	}
+
+	.hamburger {
+		z-index: 1;
+		width: 60px;
+		height: 100%;
+		padding: 1rem;
+		background: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* Hamburger Line */
+		& > div {
+			position: relative;
+			flex: none;
+			width: $head;
+			height: calc(#{$xs} * 0.75);
+			background: $lighter;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.4s ease;
+
+			/* Hamburger Lines - Top & Bottom */
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: -20px;
+				width: 100%;
+				height: 100%;
+				background: inherit;
+			}
+			/* Moves Line Down */
+			&::after {
+				top: 20px;
+			}
+		}
+	}
+
+	.toggler:checked + .hamburger > div {
+		transform: rotate(135deg);
+	}
+
+	/* Turns Lines Into X */
+	.toggler:checked + .hamburger > div:after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+	.toggler:checked + .hamburger > div:before {
+		top: 0;
+		transform: rotate(90deg);
+	}
+
+	/* Show Menu */
+	.toggler:checked ~ .menu {
+		visibility: visible;
+	}
+
+	.toggler:checked ~ .menu > div {
+		transform: scale(1);
+		transition-duration: 0.75s;
+	}
+
+	.toggler:checked ~ .menu > div > div {
+		opacity: 1;
+		transition: opacity 0.4s ease 0.4s;
+	}
+
+	.menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > div {
+			align-self: flex-end;
+			background: $dark;
+			opacity: 0.75;
+			width: 100%;
+			height: calc(100% - calc(#{$head} * 1.25));
+			display: flex;
+			flex: none;
+			align-items: center;
+			justify-content: center;
+			transform: scale(0);
+			transition: all 0.4s ease;
+		}
+		& > div > div {
+			text-align: center;
+			max-width: 90%;
+			max-height: 100%;
+			opacity: 0;
+			transition: opacity 0.4s ease;
+		}
+
+		& > div > div > ul > li {
+			list-style: none;
+			color: #fff;
+			padding: 1rem;
+			font-size: 5%;
+			font-family: $acc;
+		}
+
+		& > div > div > ul > li > a {
+			color: inherit;
+			font-weight: 500;
+			transition: color 0.4s ease;
+			&:active {
+				font-weight: $heavy;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		&__square {
+			flex-direction: row;
+			justify-content: space-evenly;
+			padding: 0 $s;
+
+			&__titles {
+				display: block;
+				align-self: center;
+				color: white;
+				font-family: $main;
+				font-size: $m;
+				font-weight: $med;
+			}
+			&__titles:hover {
+				font-weight: $heavy;
+			}
+		}
+
+		&__menu {
+			display: none;
+		}
+	}
+}
