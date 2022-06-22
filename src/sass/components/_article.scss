@@ -1,14 +1,14 @@
 @use '../abstracts/' as *;
 
 .card {
-    background: $back;
+    background-color: $back;
     width: 100%;
-    text-align: center;
     height: 400px;
     margin: $s 0;
     color: white;
     padding: $xs;
     position: relative;
+    background-size: cover;
 
       &::before {
         content: '';
@@ -16,6 +16,9 @@
         height: 100vh;
         width: 100%;
         position: absolute;
+        background-color: black;
+        z-index: 0;
+        max-height: 400px;
         top: 0;
         left: 0;
         opacity: .6; 
@@ -24,24 +27,34 @@
 
     &__img {
       width: 100%;
+      max-width: 400px;
       display: block;
       height: 100%;
       object-fit: cover;
     }
 
     &__title{
-      position: absolute;
+      text-align: center;
         font-size: $l;
         font-family: $acc;
         font-weight: $bold;
         text-transform: uppercase;
+        color: white;
     }
     &__text{
-      position: absolute;
+      position: relative;
+      display: block;
+      padding-top: $xs;
+      padding-bottom: $xs;
         font-size: $m;
         font-family: $main;
         font-weight: $reg;
     }
+  div.card__text{
+    text-align:justify;
+    margin: auto 0 auto 0;
+    padding-inline: $m;
+  }
 }
 
 
@@ -52,5 +65,9 @@
       width: 30%;
       border-radius: $lbord;
       margin: $s;
+
+      &::before {
+        border-radius: $lbord;
+      }
     }
 }

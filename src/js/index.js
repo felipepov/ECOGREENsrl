@@ -37,26 +37,45 @@ const sendEmail = () => {
     localStorage.setItem('email', 'true');
 }
 
+let header1;
+let current1;
+let backgrounds1 = [];
+let setValues1 = (name, images) => {
+    header1 = document.getElementsByClassName(name)[0];
+    current1 = 0;
+    backgrounds1 = images;
+    header1.style.backgroundImage = backgrounds1[0];    
+}
 
-$(document).ready(function(){
-    $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-        }]
-    });
-});
+let header2;
+let current2;
+let backgrounds2 = [];
+let setValues2 = (name, images) => {
+    header2 = document.getElementsByClassName(name)[0];
+    current2 = 0;
+    backgrounds2 = images;
+    header2.style.backgroundImage = backgrounds2[0];    
+}
+
+
+let nextBackground1 = () => {
+    current1++;
+    current1 = current1 % backgrounds1.length;
+    header1.style.backgroundImage = backgrounds1[current1];
+}
+
+let nextBackground2 = () => {
+    current2++;
+    current2 = current2 % backgrounds2.length;
+    header2.style.backgroundImage = backgrounds2[current2];
+}
+
+setValues1('card--roads', [`url('../../images/proyects/boulevard2.png')`
+, `url('../../images/proyects/boulevard1.png')`
+, `url('../../images/proyects/boulevard2.png')`])
+setInterval(nextBackground1, 2000)
+
+setValues2('card--storage', [`url('../../images/proyects/axion1.png')`
+, `url('../../images/proyects/axion2.png')`
+, `url('../../images/proyects/axion3.png')`, `url('../../images/proyects/ypf_concepcion1.png')`, `url('../../images/proyects/ypf_concepcion2.png')`, `url('../../images/proyects/ypf_concepcion3.png')`, `url('../../images/proyects/ypf_peron1.png')`, `url('../../images/proyects/ypf_peron1.png')`, `url('../../images/proyects/ypf_peron2.png')`,`url('../../images/proyects/ypf_peron3.png')`])
+setInterval(nextBackground2, 2000)
