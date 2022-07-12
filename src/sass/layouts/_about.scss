@@ -9,12 +9,13 @@
 		font-weight: $reg;
 		text-align: justify;
 		margin: $xs 0;
+
 	}
+
 	&__img {
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
-    max-height: 100vh;
+		max-height: 100vh;
+		width: 100%;
 	}
 }
 
@@ -23,14 +24,19 @@
 		&__container {
 			display: flex;
 			align-items: center;
+
+			&--img {
+				max-width: 50vw;
+			}
 		}
 		&__text {
 			font-size: $m;
 		}
+
 		&__img {
-			max-width: 50vw;
-      width: 100%;
 			height: 100%;
+			width: 50vw;
+			object-fit: cover;
 		}
 	}
 }

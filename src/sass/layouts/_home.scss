@@ -1,53 +1,44 @@
 @use '../abstracts/' as *;
 
 .home {
-	height: calc(100% - #{$head});
-  max-height: 100vh;
+	min-height: 100vh;
+	background-size: cover;
+	color: white;
+	display: flex;
+	isolation: isolate;
 	position: relative;
-
-	&::before {
-		content: '';
-		display: block;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-image: linear-gradient(270deg, $back 0%, $back 64%, $back 100%);
-		opacity: 0.6;
-	}
-
-	&__img {
-		width: 100%;
-		display: block;
-		height: 100%;
-    max-height:100vh;
-		object-fit: cover;
-	}
+	background-image: url("../../images/bg-home1.jpg");
 
 	&__main {
-		position: absolute;
+		width: 100%;
+		padding: 2em;
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
-		align-content: center;
-		top: 25%;
-		left: 13%;
-		height: 45%;
+		align-items: center;
+		justify-content: center;
 	}
+
+	&__main::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background: grey;
+		// background: linear-gradient(-45deg, $back, lightgrey,grey);
+		mix-blend-mode: multiply;
+	}
+
 	&__title {
-		width: 100%;
 		font-weight: $bold;
 		font-size: calc($xxl * 1.05);
-		margin-bottom: $l;
 		font-family: $main;
 		letter-spacing: 1px;
 		text-align: center;
+		margin-bottom: $l;
 	}
 
 	&__btn {
-		margin: 0 auto;
-		width: 75%;
 		background:$semil;
 		color: white;
 		padding: $m $xl;
@@ -92,27 +83,16 @@
 
 @media (min-width: 1100px) {
 	.home {
-		background-color: $back;
 
-		&::before {
-			background: none;
-		}
-
-		&__img {
-			width: 100%;
-			height: 100%;
-			object-fit: none;
-			object-position: right;
-		}
 
 		&__title {
-			width: 40%;
-			margin-bottom: $l;
+			// width: 40%;
+			// margin-bottom: $xl;
 		}
 
 		&__btn {
-			width: 30%;
-			margin-left: $xxl * 1.15;
+			// width: 30%;
+			// margin-left: $xxl * 1.15;
 		}
 	}
 }
