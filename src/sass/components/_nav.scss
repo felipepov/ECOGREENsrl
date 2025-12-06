@@ -149,7 +149,31 @@
 		& > div > div > ul > li > a {
 			color: inherit;
 			font-weight: 500;
-			transition: color 0.4s ease;
+			transition: all 0.3s ease;
+			display: inline-block;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -4px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				height: 2px;
+				background: $light;
+				transition: width 0.3s ease;
+			}
+
+			&:hover {
+				color: $light;
+				transform: translateX(5px);
+
+				&::after {
+					width: 80%;
+				}
+			}
+
 			&:active {
 				font-weight: $heavy;
 			}
@@ -164,17 +188,41 @@
 			justify-content: space-evenly;
 			padding: 0 $s;
 
-			&__titles {
-				display: block;
-				align-self: center;
-				color: white;
-				font-family: $main;
-				font-size: $m;
-				font-weight: $med;
+		&__titles {
+			display: block;
+			align-self: center;
+			color: white;
+			font-family: $main;
+			font-size: $m;
+			font-weight: $med;
+			transition: all 0.3s ease;
+			position: relative;
+			padding: $xs $s;
+
+			a {
+				position: relative;
+				transition: color 0.3s ease;
+
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					width: 0;
+					height: 2px;
+					background: $light;
+					transition: width 0.3s ease;
+				}
+
+				&:hover {
+					color: $light;
+
+					&::after {
+						width: 100%;
+					}
+				}
 			}
-			&__titles:hover {
-				font-weight: $heavy;
-			}
+		}
 		}
 
 		&__menu {

@@ -3,58 +3,105 @@
 .home {
 	min-height: 100vh;
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	color: white;
 	display: flex;
 	isolation: isolate;
 	position: relative;
-	background-image: url("../../images/bg-home1.jpg");
+	background-image: url("../images/bg-home1.jpg");
+
+	// Subtle overlay for better text readability
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		background: linear-gradient(135deg, rgba($darkest, 0.4) 0%, rgba($dark, 0.3) 100%);
+	}
 
 	&__main {
 		width: 100%;
 		padding: 2em;
 		position: relative;
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	&__main::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		background: grey;
-		// background: linear-gradient(-45deg, $back, lightgrey,grey);
-		mix-blend-mode: multiply;
+		min-height: 100vh;
 	}
 
 	&__title {
 		font-weight: $bold;
-		font-size: calc($xxl * 1.05);
-		font-family: $main;
-		letter-spacing: 1px;
+		font-size: calc($xxl * 1.2);
+		font-family: $acc;
+		letter-spacing: 2px;
 		text-align: center;
-		margin-bottom: $l;
+		margin-bottom: $xl;
+		text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+		line-height: 1.2;
+		animation: fadeInUp 0.8s ease-out;
 	}
 
 	&__btn {
-		background:$semil;
+		background: $semil;
 		color: white;
 		padding: $m $xl;
 		font-family: $main;
 		font-size: $s;
 		font-weight: $med;
-		box-shadow: $shlight;
+		box-shadow: 0 4px 15px rgba($semil, 0.4), 0 2px 5px rgba(0, 0, 0, 0.2);
 		border-radius: $sbord;
 		border: 0;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		animation: fadeInUp 0.8s ease-out 0.2s both;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+			transition: left 0.5s ease;
+		}
+
+		&:hover {
+			background: $semid;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba($semil, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+
+			&::before {
+				left: 100%;
+			}
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
 	}
 
-	&__btn:hover {
-		background: $semid;
-	}
 	a {
 		text-align: center;
+		text-decoration: none;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -76,23 +123,24 @@
 	&__underline {
 		align-self: center;
 		width: 10em;
-		border: 7px solid $light;
-		margin: $s 0;
+		height: 4px;
+		background: linear-gradient(90deg, transparent, $light, transparent);
+		border: none;
+		margin: $m 0 $l 0;
+		border-radius: 2px;
 	}
 }
 
 @media (min-width: 1100px) {
 	.home {
-
-
 		&__title {
-			// width: 40%;
-			// margin-bottom: $xl;
+			font-size: calc($xxl * 1.5);
+			margin-bottom: $xxl;
 		}
 
 		&__btn {
-			// width: 30%;
-			// margin-left: $xxl * 1.15;
+			padding: calc($m * 1.2) calc($xl * 1.5);
+			font-size: calc($s * 1.1);
 		}
 	}
 }

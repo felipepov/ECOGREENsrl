@@ -5,67 +5,86 @@
     width: 100%;
     margin: $s 0;
     color: white;
-    padding: $s;
+    padding: $xl;
     position: relative;
     background-size: cover;
+    border-radius: $sbord;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-
-      &::before {
+    // Gradient overlay for better text readability
+    &::before {
         content: '';
         display: block;
         height: 100%;
         width: 100%;
         position: absolute;
-        background-color: black;
+        background: linear-gradient(135deg, rgba($darkest, 0.75) 0%, rgba($dark, 0.65) 100%);
         z-index: 0;
         top: 0;
         left: 0;
-        opacity: .6; 
-      }
-    
-
-    &__img {
-      width: 100%;
-      max-width: 400px;
-      display: block;
-      height: 100%;
-      object-fit: cover;
+        transition: opacity 0.3s ease;
     }
 
-    &__title{
-      text-align: center;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            opacity: 0.85;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        text-align: center;
         font-size: $l;
         font-family: $acc;
         font-weight: $bold;
         text-transform: uppercase;
         color: white;
+        position: relative;
+        z-index: 1;
+        margin-bottom: $m;
+        letter-spacing: 1px;
     }
-    &__text{
-      position: relative;
-      display: block;
-      padding-top: $xs;
-      padding-bottom: $xs;
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        display: block;
+        padding-top: $xs;
+        padding-bottom: $xs;
         font-size: $m;
         font-family: $main;
         font-weight: $reg;
+        line-height: 1.6;
     }
-  div.card__text{
-    text-align:justify;
-    margin: auto 0 auto 0;
-    padding-inline: $m;
-  }
+
+    div.card__text {
+        text-align: justify;
+        margin: auto 0 auto 0;
+        padding-inline: $m;
+    }
 }
 
 
 @media (min-width: 768px) {
+    .card {
+        width: 30%;
+        border-radius: $sbord;
+        margin: $m;
 
-
-    .card{
-      width: 30%;
-      border-radius: $lbord;
-
-      &::before {
-        border-radius: $lbord;
-      }
+        &::before {
+            border-radius: $sbord;
+        }
     }
 }

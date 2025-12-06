@@ -1,28 +1,62 @@
 @use '../abstracts/' as *;
 
-.wrapper{
+.wrapper {
     border-radius: $sbord;
     width: 100%;
     margin: 0 auto;
     display: flex;
     overflow: hidden;
     height: 75%;
-    background: $back;
+    background: white;
     padding: $xl;
     overflow-x: scroll;
     margin-bottom: $head;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: $semil $lighter;
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $lighter;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $semil;
+        border-radius: 4px;
+
+        &:hover {
+            background: $semid;
+        }
+    }
 }
 
-.item{
+.item {
     animation: animate 5s alternate-reverse linear infinite;
     margin: auto 0 auto 0;
     padding: 0 $l 0 $m;
     animation-play-state: running;
     height: 374px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
     img {
-        object-fit: cover;
+        object-fit: contain;
         height: 100%;
         display: block;
+        filter: grayscale(20%);
+        transition: filter 0.3s ease;
+
+        &:hover {
+            filter: grayscale(0%);
+        }
     }
 }
 

@@ -19,8 +19,17 @@ a {
     margin-top: $head;
     margin-bottom: $xl;
 
-    .page:nth-child(odd){
-      background: $back;
+    .page {
+      padding: $xl 0;
+      transition: background-color 0.3s ease;
+
+      &:nth-child(odd) {
+        background: $back;
+      }
+
+      &:nth-child(even) {
+        background: white;
+      }
     }
   }
 
@@ -33,15 +42,22 @@ a {
   footer {
     min-height: $xl;
     height: 100%;
-    background-color: $dark;
-    padding: $s;
+    background: linear-gradient(135deg, $dark 0%, $darkest 100%);
+    padding: $l;
     margin-bottom: 0;
+    border-top: 3px solid $semil;
   }
 
   .footer__info {
     font-family: $main;
-    font-weight: $thin;
+    font-weight: $reg;
     color: $back;
     font-size: $xs;
     text-align: center;
+    line-height: 1.6;
+
+    b {
+      color: $light;
+      font-weight: $bold;
+    }
   }

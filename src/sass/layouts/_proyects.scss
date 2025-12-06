@@ -2,12 +2,24 @@
 
 .services {
 	background-color: white;
+	padding: $xl 0;
 
 	&__cards {
 		display: flex;
 		flex-direction: column;
-		margin-top: $s;
+		margin-top: $xl;
 		justify-content: space-evenly;
+		gap: $m;
+		padding: 0 $m;
+	}
+}
+
+.proyects {
+	padding: $xl 0;
+	background: $back;
+
+	.intro {
+		margin-bottom: $xl;
 	}
 }
 
@@ -16,7 +28,9 @@
 		&__cards {
 			display: flex;
 			flex-direction: row;
-			margin: 0;
+			margin: $xl 0;
+			padding: 0 $l;
+			gap: $l;
 		}
 	}
 }
